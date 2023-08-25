@@ -1,0 +1,79 @@
+[
+    {
+        "station": "Station 60",
+        "flag":"../assets/img/flags/belgica.png",
+        "msn": 137,
+        "fal_real": "4%",
+        "st_real": "45%",
+        "fal_theorical": "5%",
+        "st_theorical": "52%",
+        "falColor": "red",
+        "stColor": "red"
+    },
+    {
+        "station": "Station 50",
+        "flag":"../assets/img/flags/turquia.png",
+        "msn": 136,
+        "fal_real": "23%",
+        "st_real": "59%",
+        "fal_theorical": "24%",
+        "st_theorical": "86%",
+        "falColor": "red",
+        "stColor": "green"
+    },
+    {
+        "station": "Station 40",
+        "flag":"../assets/img/flags/francia.webp",
+        "msn": 135,
+        "fal_real": "49%",
+        "st_real": "76%",
+        "fal_theorical": "47%",
+        "st_theorical": "74%",
+        "falColor": "green",
+        "stColor": "green"
+    },
+    {
+        "station": "Station 30",
+        "flag":"../assets/img/flags/spain.png",
+        "msn": 134,
+        "fal_real": "81%",
+        "st_real": "85%",
+        "fal_theorical": "79%",
+        "st_theorical": "86%",
+        "falColor": "green",
+        "stColor": "red"
+    },
+    {
+        "station": "Station 20",
+        "flag":"../assets/img/flags/turquia.png",
+        "msn": 133,
+        "fal_real": "93%",
+        "st_real": "98%",
+        "fal_theorical": "94%",
+        "st_theorical": "97%",
+        "falColor": "red",
+        "stColor": "green"
+    },
+    {
+        "station": "Flight Line",
+        "flag":"../assets/img/flags/francia.webp",
+        "msn": 132,
+        "fal_real": "84%",
+        "st_real": "18%",
+        "fal_theorical": "90%",
+        "st_theorical": "5%",
+        "falColor": "red",
+        "stColor": "green"
+    },
+    {
+        "station": "Delivery Center",
+        "flag":"../assets/img/flags/belgica.png",
+        "msn": 131,
+        "fal_real": "93%",
+        "st_real": "85%",
+        "fal_theorical": "100%",
+        "st_theorical": "85%",
+        "falColor": "red",
+        "stColor": "green"
+    }
+]

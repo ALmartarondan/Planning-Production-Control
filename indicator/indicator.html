@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/logos/ALTEN_logo.png">
+    <!-- Navbar  -->
+    <link rel="stylesheet" href="../styles/navbar/navbar.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <!-- Production -->
+    <link rel="stylesheet" href="production/production.css">
+    <link rel="stylesheet" href="production/plane_modal/plane_modal.css">
+
+    <!-- Tactical -->
+    <link rel="stylesheet" href="tactical_planing/tactical.css">
+
+    <!-- Master  -->
+    <link rel="stylesheet" href="master_planning/master.css">
+
+    <!-- Reporting -->
+    <link rel="stylesheet" href="reporting/sidebar/sidebar.css">
+    <link rel="stylesheet" href="reporting/reporting.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>ALTEN</title>
+</head>
+
+<body>
+
+    <nav id="navbar" class="nav">
+        <section>
+            <a href="../index.html"><img id="alten_logo" class="nav__logo"
+                    src="../assets/img/logos/alten-SPAIN-120x35px.svg" alt="Alten"></a>
+            <div class="nav__divider"></div>
+            <p class="nav__title">Planning & Production Control</p>
+        </section>
+
+        <section>
+            <!-- <i id="sun-icon" class="fa-solid fa-sun"></i> -->
+            <a href="#" style="display: flex; align-items: center;"><img id="airbus_logo" class="nav__airbus_logo"
+                    src="../assets/img/webp_img/logos/airbus/Logo-Airbus.webp" alt="airbus"></a>
+        </section>
+    </nav>
+
+    <header class="tabs">
+        <div class="tabs__item active">
+            <span class="tabs__title">Master Planning</span>
+        </div>
+        <div class="tabs__item">
+            <span class="tabs__title">Tactical Planning</span>
+        </div>
+        <div class="tabs__item">
+            <span class="tabs__title">Production</span>
+        </div>
+        <div class="tabs__item">
+            <span class="tabs__title">Reporting</span>
+        </div>
+    </header>
+
+    <section class="content">
+
+        <div class="content__option active" id="master">
+            <h1>Master Planning</h1>
+
+            <main class="master__container">
+                <section id="aircraft_planned" class="master_aircraft_planned">
+
+                </section>
+                <section id="date_table" class="master__table">
+                    <div id="datetable">
+
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="content__option" id="tactical">
+            <h1>Tactical Planning</h1>
+            <div>
+                <div id="gantt" class="tactical_gantt">
+                    <img id="gantt_diagram" src="../assets/img/TimeLine MSN - Recortado.png">
+                </div>
+                <div class="tactical__blurred"></div>
+            </div>
+
+        </div>
+
+        <div class="content__option" id="production">
+            <h1>Production</h1>
+
+            <section id="production__list"></section>
+
+            <section id="plane__modal" class="modal">
+                <div id="modal__container" class="modal__container"></div>
+            </section>
+        </div>
+
+        <div class="content__option" id="reporting">
+            <aside class="sidebar">
+                <h1>Reporting</h1>
+                <ul class="list">
+
+                    <li class="list__item">
+                        <div class="list__button">
+                            <i class="fas fa-chart-line list__icon"></i>
+                            <a href="#" class="sidebar__link active">Missing Part Dashboard</a>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item--click">
+                        <div class="list__button list__button--click">
+                            <i class="fas fa-chart-bar list__icon"></i>
+                            <p class="sidebar__text">Aircraft Status</p>
+                            <i class="fas fa-angle-right list__arrow"></i>
+                        </div>
+
+                        <ul class="list__show">
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N4</a>
+                            </li>
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list__item list__item--click">
+                        <div class="list__button list__button--click">
+                            <i class="fas fa-network-wired list__icon"></i>
+                            <p class="sidebar__text">Work Order</p>
+                            <i class="fas fa-angle-right list__arrow"></i>
+                        </div>
+
+                        <ul class="list__show">
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N4</a>
+                            </li>
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list__item list__item--click">
+                        <div class="list__button list__button--click">
+                            <i class="fas fa-chart-pie list__icon"></i>
+                            <p class="sidebar__text">No conformities Status</p>
+                            <i class="fas fa-angle-right list__arrow"></i>
+                        </div>
+
+                        <ul class="list__show">
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N4</a>
+                            </li>
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list__item list__item--click">
+                        <div class="list__button list__button--click">
+                            <i class="fas fa-chart-area list__icon"></i>
+                            <p class="sidebar__text">Efficiency</p>
+                            <i class="fas fa-angle-right list__arrow"></i>
+                        </div>
+
+                        <ul class="list__show">
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N4</a>
+                            </li>
+                            <li class="list__inside">
+                                <a href="#" class="sidebar__link sidebar__link--inside">N3</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="reporting__content">
+
+
+
+                <div class="reporting__item active" id="missing-part">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Missing Part Dashboard</span>
+                    </div>
+
+                    <section>
+                        <div>
+                            <span>Missing Parts per Type</span>
+                            <img src="../assets/img/reporting/missing_part/per_type-r.png" alt="graph">
+                        </div>
+                        <div>
+                            <span>Missing Parts per resposible</span>
+                            <img src="../assets/img/reporting/missing_part/per_responsible-r.png" alt="graph">
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <span>Missing Parts per Type and resposible</span>
+                            <img src="../assets/img/reporting/missing_part/per_type_responsible-r.png" alt="graph">
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <span>Missing Parts per Type and Aircraft</span>
+                            <img src="../assets/img/reporting/missing_part/per_type_aircraft-r.png" alt="graph">
+                        </div>
+                    </section>
+
+                    <section>
+                        <a id="open-excel" class="reporting__button" href="../assets/excel/MP-Informe.xlsx" download>Extract detail from Missing Parts</a>
+                    </section>
+                </div>
+
+
+
+                <div class="reporting__item" id="aircraft-n4">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Aincraft Status N4</span>
+                    </div>
+
+                    <section id="aircraft-list" class="aircraft-list"></section>
+                </div>
+
+
+
+                <div class="reporting__item" id="aircraft-n3">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Aincraft Status N3</span>
+                    </div>
+
+                    <table class="reporting__table">
+                        <tr>
+                            <th></th>
+                            <th>Station 60</th>
+                            <th>Station 50</th>
+                            <th>Station 40</th>
+                            <th>Station 30</th>
+                            <th>Station 20</th>
+                            <th>Global Fal</th>
+                            <th>DC + FL</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/alemania.webp">
+                                    <span>MSN 131</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">95%</span> / 95%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                    <span>MSN 132</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">3%</span> / 75%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                    <span>MSN 133</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">98%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">93%</span> / 100%</td>
+                            <td><span class="reporting__productive">98%</span> / 97%</td>
+                            <td><span class="reporting__unproductive">93%</span> / 94%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/spain.png">
+                                    <span>MSN 134</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__unproductive">95%</span> / 100%</td>
+                            <td><span class="reporting__productive">100%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">98%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">85%</span> / 86%</td>
+                            <td></td>
+                            <td><span class="reporting__productive">81%</span> / 79%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                    <span>MSN 135</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__unproductive">96%</span> / 100%</td>
+                            <td><span class="reporting__unproductive">100%</span> / 100%</td>
+                            <td><span class="reporting__productive">76%</span> / 74%</td>
+                            <td></td>
+                            <td></td>
+                            <td><span class="reporting__productive">47%</span> / 49%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                    <span>MSN 136</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__unproductive">95%</span> / 100%</td>
+                            <td><span class="reporting__productive">59%</span> / 57%</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><span class="reporting__unproductive">23%</span> / 24%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="reporting__msn">
+                                    <img class="reporting__flag" src="../assets/img/flags/belgica.png">
+                                    <span>MSN 137</span>
+                                </div>
+                            </td>
+                            <td><span class="reporting__unproductive">45% </span> / 52%</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><span class="reporting__unproductive">4%</span> / 5%</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+                <div class="reporting__item" id="workorder-n4">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Work Order Status N4</span>
+                    </div>
+
+                    <section>
+                        <img src="../assets/img/reporting/work_order_n4/work_order_n4-r.png" alt="graph">
+
+                        <div class="workorder__container">
+                            <div class="workorder__cannibalizations">
+                                <p>Nº Cannibalizations</p>
+                                <p>33</p>
+                            </div>
+                            <div class="workorder__cannibalizations">
+                                <p>Open Cannibalizations</p>
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <div class="reporting__item" id="workorder-n3">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Work Order Status N3</span>
+                    </div>
+
+                    <section id="workorder-list" class="workorder__list">
+
+                    </section>
+                </div>
+
+
+
+                <div class="reporting__item" id="noconformities-n4">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>No Conformities Status N4</span>
+                    </div>
+
+                    <section class="noconfor__container">
+                        <section>
+                            <span>No Conformities Open per Aircraft</span>
+                            <img src="../assets/img/reporting/no_confor_n4/open_per_aircraft-r.png"
+                                alt="open_per_aircraft">
+                        </section>
+                        <section>
+                            <div class="noconfor__average">
+                                <span>Average Nº Days NC open</span>
+                                <p>27,15</p>
+                            </div>
+                            <div class="noconfor__responsible">
+                                <span>No Conformities Open per resposible</span>
+                                <img src="../assets/img/reporting/no_confor_n4/open_per_responsible-r.png"
+                                    alt="open_per_responsible">
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+
+
+                <div class="reporting__item" id="noconformities-n3">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>No Conformities Status N3</span>
+                    </div>
+
+                    <section class="noconfor__container">
+                        <section>
+                            <span>No Conformities Open per Aircraft and Responsible</span>
+                            <img src="../assets/img/reporting/no_confor_n3/per_aircraft_responsible-r.png"
+                                alt="open_per_aircraft">
+                        </section>
+                        <section>
+                            <div class="noconfor__critical">
+                                <span>NCs Open in Critical path</span>
+                                <img src="../assets/img/reporting/no_confor_n3/critical_path-r.png" alt="critical-path">
+                            </div>
+                            <div class="noconfor__responsible">
+                                <span>No Conformities Open per resposible</span>
+                                <img src="../assets/img/reporting/no_confor_n3/per_responsible-r.png"
+                                    alt="open_per_responsible">
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+
+
+                <div class="reporting__item" id="efficiency-n4">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Efficiency N4</span>
+                    </div>
+                    <section>
+                        <div class="reporting__container">
+                            <div class="reporting__cannibalizations">
+                                <p>C-VAT - Dayly</p>
+                                <p class="reporting__unproductive">51%</p>
+                                <p>C-VAT - Last Week</p>
+                                <p class="reporting__productive">60%</p>
+                            </div>
+                            <div class="reporting__cannibalizations">
+                                <p>Daily Eficiency</p>
+                                <p class="reporting__unproductive">56%</p>
+                                <p>Weekly Eficiency</p>
+                                <p class="reporting__unproductive"">76%</p>
+                            </div>
+                        </div>
+                        <img class="efficiency__img" src="../assets/img/reporting/efficiency_n4/EfficiencyN4.png" alt="graph">  
+                    </section>
+                </div>
+
+
+
+                <div class="reporting__item" id="efficiency-n3">
+                    <div class="reporting__title">
+                        <span>26/07/2023</span>
+                        <span>Efficiency N3</span>
+                    </div>
+
+                    <main class="efficiency__container">
+                        <section>
+                            <span>Daily Efficiency per Aircraft</span>
+                            <table class="efficiency__table">
+                                <tr style="opacity: 0;">
+                                    <th>_</th>
+                                    <th>_</th>
+                                    <th>_</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/alemania.webp">
+                                            <span>MSN 131</span>
+                                        </div>
+                                    </td>
+                                    <td  class="reporting__unproductive">
+                                        62%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                            <span>MSN 132</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__productive">
+                                        88%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                            <span>MSN 133</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__unproductive">
+                                        31%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/spain.png">
+                                            <span>MSN 134</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__unproductive">
+                                        49%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                            <span>MSN 135</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__unproductive">
+                                        79%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                            <span>MSN 136</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__unproductive">
+                                        64%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/belgica.png">
+                                            <span>MSN 137</span>
+                                        </div>
+                                    </td>
+                                    <td class="reporting__productive">
+                                        84%
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                            <span>Cumulative Efficiency per Aircraft & Station</span>
+                            <table class="reporting__table">
+                                <tr>
+                                    <th></th>
+                                    <th>Station 60</th>
+                                    <th>Station 50</th>
+                                    <th>Station 40</th>
+                                    <th>Station 30</th>
+                                    <th>Station 20</th>
+                                    <th>Global Fal</th>
+                                    <th>DC + FL</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/alemania.webp">
+                                            <span>MSN 131</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">97%</span></td>
+                                    <td><span class="reporting__unproductive">66%</span></td>
+                                    <td><span class="reporting__unproductive">40%</span></td>
+                                    <td><span class="reporting__unproductive">63%</span></td>
+                                    <td><span class="reporting__productive">89%</span></td>
+                                    <td><span class="reporting__unproductive">65%</span></td>
+                                    <td><span class="reporting__unproductive">55%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                            <span>MSN 132</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">88%</span></td>
+                                    <td><span class="reporting__productive">68%</span></td>
+                                    <td><span class="reporting__productive">82%</span></td>
+                                    <td><span class="reporting__productive">80%</span></td>
+                                    <td><span class="reporting__productive">97%</span></td>
+                                    <td><span class="reporting__productive">80%</span></td>
+                                    <td><span class="reporting__unproductive">37%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                            <span>MSN 133</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">95%</span></td>
+                                    <td><span class="reporting__unproductive">65%</span></td>
+                                    <td><span class="reporting__productive">84%</span></td>
+                                    <td><span class="reporting__unproductive">72%</span></td>
+                                    <td><span class="reporting__productive">87%</span></td>
+                                    <td><span class="reporting__unproductive">76%</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/spain.png">
+                                            <span>MSN 134</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">89%</span></td>
+                                    <td><span class="reporting__unproductive">55%</span></td>
+                                    <td><span class="reporting__unproductive">75%</span></td>
+                                    <td><span class="reporting__unproductive">77%</span></td>
+                                    <td></td>
+                                    <td><span class="reporting__productive">69%</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/francia.webp">
+                                            <span>MSN 135</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">93%</span></td>
+                                    <td><span class="reporting__unproductive">61%</span></td>
+                                    <td><span class="reporting__productive">84%</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="reporting__unproductive">74%</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/turquia.png">
+                                            <span>MSN 136</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">91%</span></td>
+                                    <td><span class="reporting__unproductive">61%</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="reporting__unproductive">75%</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="reporting__msn">
+                                            <img class="reporting__flag" src="../assets/img/flags/belgica.png">
+                                            <span>MSN 137</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="reporting__productive">91% </span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="reporting__productive">91%</span></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </section>
+                    </main>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://kit.fontawesome.com/2a07e61abb.js" crossorigin="anonymous"></script>
+
+    <!-- Work Status n3 -->
+    <script src="reporting/workorder_n3/workOrderStatusN3.js"></script>
+    <!-- Aircraft N4 -->
+    <script defer src="reporting/aircraft_n4/aircraft_n4.js"></script>
+    <!-- Sidebar -->
+    <script defer src="reporting/sidebar/sidebar.js"></script>
+    <!-- Main -->
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>

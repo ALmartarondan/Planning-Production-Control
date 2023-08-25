@@ -1,0 +1,233 @@
+.categories {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    padding: 5rem 10rem 0 10rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.categories__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    justify-content: center;
+    color: #858585;
+    background-color: inherit;
+    transition: 500ms ease background-color;
+}
+
+.categories__img {
+    box-shadow: inherit;
+    width: 100%;
+    max-width: 30rem;
+    height: 100%;
+    flex: 1 0 100px;
+    border-radius: 5px;
+}
+
+.categories__list {
+    flex: 2 0 300px;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    overflow-y: auto;
+    max-height: 38rem;
+}
+
+.categories__item {
+    color: inherit;
+    text-decoration: none;
+    gap: 2rem;
+    border-radius: 25px 3px 25px 3px;
+    border: 1px solid #c6c6c6;
+    padding: 2rem 3rem 2rem 2rem;
+
+    align-items: center;
+    transition: 600ms ease transform;
+    animation: scale-up-center 0.5s;
+}
+
+.categories__item:hover {
+    background-color: rgba(148, 186, 255, 0.747);
+    color: white;
+    transform: scale(1.05);
+
+    & i {
+        color: white;
+        border: 2px solid white;
+    }
+}
+
+.categories__item i {
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 2px solid #00205b;
+    color: #00205b;
+}
+
+.categories__description {
+    color: inherit;
+    margin: 0;
+    gap: 1rem;
+}
+
+.categories__title {
+    color: inherit;
+    font-family: inherit;
+    font-size: 23px;
+    font-weight: 800;
+    margin: inherit;
+}
+
+.categories__subtitle {
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    margin: inherit;
+}
+
+.categories__info {
+    margin: inherit;
+    font-weight: 600;
+}
+
+.airbus-gradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(0, 49, 153, 1) 100%);
+}
+
+.original-background {
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* CSS Scroll */
+.categories__list::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.categories__list::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.categories__list::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.categories__list::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.categories__list::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.categories__list::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Responsive */
+@media(max-width:1300px) {
+    .categories__img {
+        display: none;
+    }
+}
+
+/* @media(max-width:800px) {
+    .categories__info {
+        display: none;
+    }
+
+    .categories__list {
+        max-height: 100%;
+    }
+} */
+
+@media(max-width:500px) {
+    .categories {
+        padding: 0;
+    }
+
+    .categories__container {
+        padding: 0;
+    }
+
+    .categories__list {
+        height: 100%;
+        max-height: 40rem;
+        padding: 3rem 2rem 0 2rem;
+    }
+
+    .categories__item {
+        padding: 1rem 2rem;
+    }
+
+
+    .categories__title {
+        font-size: 15px;
+    }
+
+    .categories__subtitle {
+        font-size: 12px;
+    }
+
+
+
+    .test_arrow {
+        width: 4rem !important;
+        right: 1rem !important;
+        top: 1rem !important;
+    }
+}
+
+
+@media(max-width:850px) {
+    .categories {
+        padding: 0;
+    }
+
+    .categories__container {
+        padding: 0;
+    }
+
+    .categories__list {
+        height: 100%;
+        max-height: 60rem;
+        padding: 3rem 2rem 0 2rem;
+    }
+
+    .categories__item {
+        padding: 2rem 3rem;
+    }
+
+
+    .categories__title {
+        font-size: 20px;
+    }
+
+    .categories__subtitle {
+        font-size: 16px;
+    }
+
+
+
+    .test_arrow {
+        width: 4rem !important;
+        right: 1rem !important;
+        top: 1rem !important;
+    }
+}
+
+
+

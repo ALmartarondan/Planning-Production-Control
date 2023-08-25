@@ -1,0 +1,66 @@
+#tactical {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    user-select: none; 
+}
+
+#tactical > h1 {
+    margin: 3rem 0 1em 6rem;
+}
+
+#tactical .tactical_gantt {
+    width: 100%;
+    overflow-x: scroll;
+    cursor: grab;
+    transform: scale(0.99);
+    transition: all .3s ease;
+}
+
+/* #tactical .tactical_gantt > img {
+    height: 70vh;
+    transform: scale(0.99);
+} */
+
+
+#tactical > div {
+    width: 100%;
+    position: relative;
+}
+
+#tactical .tactical_gantt > img {
+    width: 230rem;
+}
+
+#tactical .tactical_gantt.active {
+    background: rgba(255,255,255,0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+#tactical > div > .tactical__blurred {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64); 
+    box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64);
+}
+
+
+@media(max-width:500px) {
+    #tactical {
+        align-items: center;
+        padding-top: 2rem;
+        gap: 1rem;
+    }
+
+    #tactical > h1 {
+        margin: 0;
+    }
+
+    #tactical .tactical_gantt > img {
+        width: 240rem;
+    }
+}

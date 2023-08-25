@@ -1,0 +1,97 @@
+.nav {
+    box-sizing: border-box;
+    font-family: Sans-serif;
+    position: fixed;
+    display: flex;
+    padding: 0.4rem 1.5rem 0.4rem 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    transition: 500ms ease background-color, 400ms ease top;
+    z-index: 10;
+}
+
+.nav__indicator {
+    box-sizing: border-box;
+    font-family: Sans-serif;
+    display: flex;
+    padding: 0.4rem 2.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 500ms ease background-color, 400ms ease top;
+}
+
+.initial {
+	background-color: rgba(255, 255, 255, 0);
+    color: white;
+
+    & i {
+        color: white !important;
+    }
+
+    & i:hover {
+        color: rgba(148, 186, 255) !important;
+    }
+}
+
+.nav section {
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 7.5rem;
+}
+
+.nav__logo--initial {
+    width: 1.5rem;
+}
+
+
+
+.nav__divider {
+    border-left:1px solid #858585; 
+    border-right:1px solid #858585; 
+    margin: 0.5rem 0;
+    height: 2rem;
+}
+
+.nav__title {
+    color: inherit
+}
+
+.nav__airbus_logo {
+    width: 4rem;
+}
+
+#sun-icon {
+    margin-right: 30px;
+}
+
+@media(max-width:500px) {
+
+    .nav {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.4rem 1rem 0.4rem 2.5rem;
+    }
+
+    .nav__title {
+        font-size: 12px;
+    }
+
+    .nav__logo {
+        width: 4rem;
+    }
+
+    .nav__airbus_logo {
+        width: 2.5rem;
+    }
+
+    i {
+        font-size: 20px;
+    }
+}

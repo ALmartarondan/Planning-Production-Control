@@ -1,0 +1,58 @@
+[
+    {
+        "station": "Station 60",
+        "flag":"../assets/img/flags/belgica.png",
+        "msn": 137,
+        "grafico": "../assets/img/reporting/work_order_n3/Station60.png",
+        "nCannibalizations": 0,
+        "openCannibalization": 0 
+    },
+    {
+        "station": "Station 50",
+        "flag":"../assets/img/flags/turquia.png",
+        "msn": 136,
+        "grafico": "../assets/img/reporting/work_order_n3/Station50.png",
+        "nCannibalizations": 4,
+        "openCannibalization": 4 
+    },
+    {
+        "station": "Station 40",
+        "flag":"../assets/img/flags/francia.webp",
+        "msn": 135,
+        "grafico": "../assets/img/reporting/work_order_n3/Station40.png",
+        "nCannibalizations": 4,
+        "openCannibalization": 2 
+    },
+    {
+        "station": "Station 30",
+        "flag":"../assets/img/flags/spain.png",
+        "msn": 134,
+        "grafico": "../assets/img/reporting/work_order_n3/Station30.png",
+        "nCannibalizations": 1,
+        "openCannibalization": 1 
+    },
+    {
+        "station": "Station 20",
+        "flag":"../assets/img/flags/turquia.png",
+        "msn": 133,
+        "grafico": "../assets/img/reporting/work_order_n3/Station20.png",
+        "nCannibalizations": 0,
+        "openCannibalization": 0 
+    },
+    {
+        "station": "Flight Line",
+        "flag":"../assets/img/flags/francia.webp",
+        "msn": 132,
+        "grafico": "../assets/img/reporting/work_order_n3/FlightLine.png",
+        "nCannibalizations": 21,
+        "openCannibalization": 2 
+    },
+    {
+        "station": "Delivery Center",
+        "flag":"../assets/img/flags/belgica.png",
+        "msn": 131,
+        "grafico": "../assets/img/reporting/work_order_n3/DeliveryCenter.png",
+        "nCannibalizations": 3,
+        "openCannibalization": 3 
+    }
+]
