@@ -239,6 +239,10 @@
     justify-content: center;
 }
 
+#workorder-n4 section > img {
+    width: 60%;
+}
+
 #workorder-n4 section>.workorder__container {
     display: flex;
     justify-content: center;
