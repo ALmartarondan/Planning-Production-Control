@@ -10,13 +10,43 @@
 }
 
 #tactical .tactical_gantt {
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
     width: 100%;
     overflow-x: scroll;
     cursor: grab;
     transform: scale(0.99);
     transition: all .3s ease;
 }
+#tactical .diagram_container {
+     display: flex;
+    align-items: flex-start;
+}
 
+#tactical .tactical_msn_cards {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 1;
+    width: 12%;
+}
+
+#tactical .tactical_bar {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 6rem;
+}
+.calendar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.calendar-button img {
+    width: 1.2rem; /* Ajusta el tamaño según sea necesario */
+    height: 1.2rem; /* Ajusta el tamaño según sea necesario */
+}
 /* #tactical .tactical_gantt > img {
     height: 70vh;
     transform: scale(0.99);
