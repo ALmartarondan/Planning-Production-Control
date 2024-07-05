@@ -12,13 +12,13 @@
 #tactical .tactical_gantt {
     display: flex;
     align-items: flex-start;
-    z-index: 1;
     width: 100%;
     overflow-x: scroll;
     cursor: grab;
     transform: scale(0.99);
     transition: all .3s ease;
 }
+/* CSS MARTAs VERSION */
 #tactical .diagram_container {
      display: flex;
     align-items: flex-start;
@@ -28,7 +28,6 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    z-index: 1;
     width: 12%;
 }
 
@@ -46,7 +45,40 @@
 .calendar-button img {
     width: 1.2rem; /* Ajusta el tamaño según sea necesario */
     height: 1.2rem; /* Ajusta el tamaño según sea necesario */
+    
 }
+  /* Estilos para centrar el modal */
+.modal-calendar {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1; /* En frente de otros elementos */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Estilos para el fondo oscuro */
+.modal-backdrop {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* FIN CSS MARTAs VERSION */
+
 /* #tactical .tactical_gantt > img {
     height: 70vh;
     transform: scale(0.99);
