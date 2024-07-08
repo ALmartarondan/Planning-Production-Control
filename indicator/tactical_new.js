@@ -19,3 +19,9 @@ button.addEventListener('click', openModal);
 
 // Evento para cerrar el modal al hacer clic en el fondo oscuro
 modalBackdrop.addEventListener('click', closeModal);
+
+const modal_calendario = document.getElementById('modal-calendario');
+function cerrarVentana(){
+    //la referencia de la ventana es el objeto window del popup. Lo utilizo para acceder al método close
+    modal_calendario.close()
+}

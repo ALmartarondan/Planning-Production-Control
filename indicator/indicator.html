@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/logos/ALTEN_logo.png">
+
+    <!-- Calendar -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!-- Navbar  -->
     <link rel="stylesheet" href="../styles/navbar/navbar.css">
 
@@ -84,15 +90,52 @@
             <div>
                 <div id="bar" class="tactical_bar">
                     <!-- Boton CALENDARIO -->
-                     <!-- FALTA MODAL CALENDARIO -->
-                    <button class="calendar-button">
+                    <!-- FALTA MODAL CALENDARIO -->
+                    <button onclick="document.getElementById('modal_calendar').showModal();" class="calendar-button">
                         <img src="../assets/img/svg-calendar.svg" alt="Calendario">
                     </button>
-                    <dialog id="modal" class="modal-calendar">
-                        <h2>Este es el título de mi ventana modal</h2>
-                        <p>Este es un texto de ejemplo dentro de una ventana modal</p>
-                        <button>Cerrar</button>
+                    <!-- Ventana modal Formulario -->
+                    <dialog id="modal_calendar" class="modal__container1">
+                        <header class="calendar-header">Edit calendars</header>
+                        <!-- Style en cada div -->
+                        <div style="display: flex; padding: 1rem; flex-direction: column; gap: 0.5rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <label>New calendar:</label>
+                                <input type="text">
+                                <button>Insert calendar</button>
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <label>Select date:</label>
+                                <input type="" id="datepicker">
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 1rem; ">
+                                <label>Description:</label>
+                                <textarea id="description" rows="4" cols="25">
+                                </textarea>
+                            </div>
+                            <div  style="display: flex; gap: 1rem;">
+                                <div style="display: flex; justify-content: center; align-items: center; flex: 1;">
+                                    <img src="../assets/img/july.png" alt="Calendario Julio">
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; gap: 0.5rem;">
+                                    <button>Import</button>
+                                    <button>Export All</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Botones Guardar y Cerrar -->
+                        <div class="close_button">
+                            <button>Save</button>
+                            <button onclick="document.getElementById('modal_calendar').close();">Close</button>
+                        </div>
                     </dialog>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                    <script>
+                        $(function () {
+                            $("#datepicker").datepicker();
+                        });
+                    </script>
                 </div>
                 <div id="card-grantt-container" class="diagram_container">
                     <div id="msn-cards" class="tactical_msn_cards">
@@ -254,7 +297,8 @@
                     </section>
 
                     <section>
-                        <a id="open-excel" class="reporting__button" href="../assets/excel/MP-Informe.xlsx" download>Extract detail from Missing Parts</a>
+                        <a id="open-excel" class="reporting__button" href="../assets/excel/MP-Informe.xlsx"
+                            download>Extract detail from Missing Parts</a>
                     </section>
                 </div>
 
@@ -510,7 +554,8 @@
                                 <p class="reporting__unproductive"">76%</p>
                             </div>
                         </div>
-                        <img class="efficiency__img" src="../assets/img/reporting/efficiency_n4/EfficiencyN4.png" alt="graph">  
+                        <img class=" efficiency__img" src="../assets/img/reporting/efficiency_n4/EfficiencyN4.png"
+                                    alt="graph">
                     </section>
                 </div>
 
@@ -538,7 +583,7 @@
                                             <span>MSN 131</span>
                                         </div>
                                     </td>
-                                    <td  class="reporting__unproductive">
+                                    <td class="reporting__unproductive">
                                         62%
                                     </td>
                                 </tr>
