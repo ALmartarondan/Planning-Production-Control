@@ -49,6 +49,8 @@
 }
   /* Estilos para centrar el modal */
   .modal__container1 {
+    font-size: 12px;
+    font-weight: 600;
     margin: auto;
     position: fixed;
     top: 50%;
@@ -84,6 +86,9 @@ dialog {
     padding: 0;
 }
 .calendar-header {
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -107,6 +112,7 @@ dialog {
     justify-content: center;
     text-align: center;
     padding: 1rem 0;
+    gap: 0.5rem;
 }
 
 /* Estilos para el fondo oscuro */
