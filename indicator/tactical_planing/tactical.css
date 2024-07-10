@@ -1,14 +1,14 @@
 #tactical {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; 
-    user-select: none; 
+    flex-wrap: wrap;
+    user-select: none;
 }
-
-#tactical > h1 {
+ 
+#tactical>h1 {
     margin: 3rem 0 1em 6rem;
 }
-
+ 
 #tactical .tactical_gantt {
     display: flex;
     align-items: flex-start;
@@ -18,37 +18,83 @@
     transform: scale(0.99);
     transition: all .3s ease;
 }
-/* CSS MARTAs VERSION */
-#tactical .diagram_container {
-     display: flex;
-    align-items: flex-start;
+ 
+ 
+/* #tactical .tactical_gantt > img {
+    height: 70vh;
+    transform: scale(0.99);
+} */
+ 
+ 
+#tactical>div {
+    width: 100%;
+    position: relative;
 }
-
-#tactical .tactical_msn_cards {
+ 
+#tactical .tactical_gantt>img {
+    width: 230rem;
+}
+ 
+#tactical .tactical_gantt.active {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+ 
+#tactical>div>.tactical__blurred {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64);
+    box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64);
+}
+ 
+ 
+@media(max-width:500px) {
+    #tactical {
+        align-items: center;
+        padding-top: 2rem;
+        gap: 1rem;
+    }
+ 
+    #tactical>h1 {
+        margin: 0;
+    }
+ 
+    #tactical .tactical_gantt>img {
+        width: 240rem;
+    }
+}
+ 
+ 
+#tactical .diagram_container {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
-    width: 12%;
 }
-
+ 
 #tactical .tactical_bar {
     display: flex;
     align-items: flex-start;
     margin-left: 6rem;
 }
+ 
 .calendar-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-bottom: 1rem;
 }
+ 
 .calendar-button img {
-    width: 1.2rem; /* Ajusta el tamaño según sea necesario */
-    height: 1.2rem; /* Ajusta el tamaño según sea necesario */
-    
+    width: 1.2rem;
+    height: 1.2rem;
 }
-  /* Estilos para centrar el modal */
-  .modal__container1 {
+ 
+/* css de la ventana modal */
+.modal__container1 {
     font-size: 12px;
     font-weight: 600;
     margin: auto;
@@ -58,12 +104,12 @@
     transform: translate(-50%, -50%);
     border: solid 1px #ccc;
     background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     box-sizing: border-box;
     flex-direction: column;
 }
-
+ 
 .modal_calendar {
     display: none;
     margin: auto;
@@ -75,20 +121,22 @@
     min-width: 35rem;
     border: 1px solid #c6c6c6;
     border-radius: 20px;
-    box-shadow: 0px 0px 13px -3px rgba(0,0,0,0.82);
+    box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.82);
     background-color: white;
     transform: var(--transform);
-    transition:  var(--transition);
+    transition: var(--transition);
     user-select: none;
     z-index: 1000;
 }
+ 
 dialog {
     padding: 0;
 }
+ 
 .calendar-header {
     font-size: 16px;
     font-weight: 600;
-    color:black;
+    color: black;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -98,81 +146,192 @@ dialog {
     background-color: #e9e9e9;
     border-radius: 20px 20px 0 0;
 }
+ 
 .calendar-container {
-    margin-top: 20px; /* Espacio superior para separar del contenido principal */
-    text-align: center; /* Centrar el contenido horizontalmente */
+    margin-top: 20px;
+    text-align: center;
     z-index: 1500 !important;
 }
-
-#ui-datepicker-div{ 
-    z-index: 2000 !important; /* Asegúrate de que el datepicker tenga un z-index mayor que el del modal */
-}
-.close_button{
+ 
+.close_button {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 1rem 0;
     gap: 0.5rem;
 }
-
-/* Estilos para el fondo oscuro */
-.modal-backdrop {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 0;
-    left: 0;
-    top: 0;
+ 
+/* css selector fecha en calendario */
+#ui-datepicker-div {
+    z-index: 2000 !important;
+}
+ 
+/* css subtab de programas */
+.sub_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-bottom: 1px solid #c6c6c6;
+    height: 2.5rem;
+}
+ 
+.sub_tabs .subtabs__item {
+    flex: 1 0 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    transition: all .5s ease;
+}
+ 
+.sub_tabs .subtabs__item.active {
+    background-color: #aeb1b7;
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+ 
+.sub_tabs .subtabs__item.active .subtabs__title {
+    color: white;
+}
+ 
+.sub_tabs .subtabs__item:hover {
+    background-color: rgba(148, 186, 255, 0.747);
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+ 
+.sub_tabs .dsubtabs__item:hover .subtabs__title {
+    color: white;
+}
+ 
+.sub_tabs .subtabs__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 700;
+    color: #858585;
+    user-select: none;
 }
-
-/* FIN CSS MARTAs VERSION */
-
-/* #tactical .tactical_gantt > img {
-    height: 70vh;
-    transform: scale(0.99);
-} */
-
-
-#tactical > div {
+ 
+/* css tarjetas msn en tactical */
+ 
+#tactical #list-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+}
+ 
+.tactical_msn__card {
+    border: 1px solid #c6c6c6;
+    border-radius: 15px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 30%;
+    transition: 200ms ease filter;
+    user-select: none;
+    cursor: pointer;
+    animation: scale-up-center 0.6s;
+}
+ 
+.tactical_msn__card .tactical_msn__station {
+    margin: 0;
+    width: 100%;
+    background-color: #e9e9e9;
+    border-radius: 20px 20px 0 0;
+    padding: 0.5rem 1rem;
+    color: #858585;
+    font-size: 16px;
+}
+ 
+.tactical_msn__card .tactical_msn__card_content {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    height: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+ 
+.tactical_msn__card_content .tactical_msn__card_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+ 
+.tactical_msn__card_description .tactical_msn__flag {
+    width: 30px;
+    height: auto;
+    border-radius: 3px;
+}
+ 
+.tactical_msn__card_description .tactical_msn__msn {
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+}
+ 
+.list_airbus_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70px;
+    width: 80px;
+}
+ 
+.form_button {
     position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 3rem;
+    border: #858585;
+    border-radius: 2rem;
+    background: #ffffff;
+    color: #858585;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
-
-#tactical .tactical_gantt > img {
-    width: 230rem;
+ 
+ 
+.form_button-content {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
 }
-
-#tactical .tactical_gantt.active {
-    background: rgba(255,255,255,0.3);
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
-  }
-
-#tactical > div > .tactical__blurred {
-    height: 100%;
+ 
+.form_button::before {
+    content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    -webkit-box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64); 
-    box-shadow: 5px 5px 40px 40px rgba(255, 255, 255, 0.7), inset 0px 0px 0px 46px rgba(255, 255, 255, 0.64);
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    /* background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    ); */
+    background: rgb(0, 85, 135);
+    background: linear-gradient(90deg, rgba(0, 85, 135, 1) 0%, rgba(0, 32, 91, 1) 100%);
+    transition: all 0.475s;
 }
-
-
-@media(max-width:500px) {
-    #tactical {
-        align-items: center;
-        padding-top: 2rem;
-        gap: 1rem;
-    }
-
-    #tactical > h1 {
-        margin: 0;
-    }
-
-    #tactical .tactical_gantt > img {
-        width: 240rem;
-    }
-}
+ 
+ 
+/* FIN CSS MARTAs VERSION */
+ 
