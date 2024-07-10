@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
  
  
-const createTacticalCards = (cardsData, aircraftDelivered) => {
+const createTacticalCards = (cardsData) => {
     const msnModal = document.getElementById('form_msn__modal');
     const modalContainer = document.getElementById('modal_msn__container');
  
@@ -35,8 +35,6 @@ const createTacticalCards = (cardsData, aircraftDelivered) => {
  
             modalContainer.innerHTML = `
                                 <header>
-                                    <span class="modal__date">${data.cardDate}</span>
-                                    <span class="modal__title">${data.station}</span>
                                     <div class="modal__msn">
                                         <img src="${data.flag}" class="modal__flag" alt="flag">
                                         <span class="modal__n_msn">MSN ${data.msn}</span>
@@ -48,100 +46,15 @@ const createTacticalCards = (cardsData, aircraftDelivered) => {
             modalClose.addEventListener('click', () => msnModal.classList.remove('modal--show'));
  
             const main = document.createElement('main');
-            data?.delivery == false
-                ? main.className = 'modal__content'
-                : main.className = 'modal__content delivery';
+            
  
             main.innerHTML = `
-                    <div class="modal__start_end_date">
-                        <p>ST Start date</p>
-                        <span>${data.startDate}</span>
-                        <p>ST Finish Date</p>
-                        <span>${data.endDate}</span>
-                        <p>WD next station change</p>
-                        <span>${data.nextStation}</span>
+                    <div >
+                       <img class="form_img" src="../assets/img/msn-form.png">
                     </div>
                     `;
  
-            const modal1 = `
-                        <div>
-                            <div>
-                                <span>AC Progress - Station</span>
-                                <img src="${data.acProgress}">
-                            </div>
- 
-                            <div>
-                                <span>Missing parts</span>
-                                <img src="${data.missingParts}">
-                            </div>
-                        </div>
- 
-                        <div>
-                             <div>
-                                <span>Work Order Status</span>
-                                <img src="${data.workOrder}">
-                            </div>
- 
-                            <div>
-                                <span>Efficiency</span>
-                                <img src="${data.efficiency}">
-                            </div>
-                         </div>
- 
-                        <div>
-                            <div>
-                                <span>Open No Conformities & warnings</span>
-                                <img src="${data.noConforAndWarning}">
-                            </div>
- 
-                            <div>
-                                <span>ERC & Remarks</span>
-                                <img src="${data.ercRemarks}">
-                            </div>
-                        </div>`
- 
-            const modal2 = `
-                        <div>
-                            <div>
-                                <span>AC Progress - Station</span>
-                                <img src="${data.acProgress}">
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <span>Flight line - test</span>
-                                <img src="${data.fl_test}">
-                            </div>
-                        </div>
- 
-                        <div>
-                            <div>
-                                <span>flights</span>
-                                <img src="${data.flights}">
-                            </div>
- 
-                            <div>
-                                <span>hand over</span>
-                                <img src="${data.handOver}">
-                            </div>
-                        </div>
- 
-                        <div>
-                            <div>
-                                <span>Open No Conformities & Remarks</span>
-                                <img src="${data.noConforAndRemarks}">
-                            </div>
- 
-                            <div>
-                                <span>TBL</span>
-                                <img src="${data.tbl}">
-                            </div>
-                        </div>`
- 
-            data?.delivery == false
-                ? main.innerHTML += modal1
-                : main.innerHTML += modal2;
- 
+
             modalContainer.appendChild(main)
  
             msnModal.classList.add('modal--show');
