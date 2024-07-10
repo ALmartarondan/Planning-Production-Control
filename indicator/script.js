@@ -12,7 +12,7 @@ Array.from(tabs).forEach((tab, i) => {
     content[i].classList.add('active');
   })
 });
- 
+
 
 // Tactical
 
@@ -274,8 +274,7 @@ const createProductionCards = (cardsData, aircraftDelivered) => {
     cardContent.appendChild(plane_graph);
     cardContent.innerHTML +=
       `<article class="production__card_description">
-          <img class="production__flag" src="${data.flag}" alt="flag">
-          <p class="production__msn">MSN ${data.msn}</p>
+         
       </article>`
 
     card.appendChild(cardContent);
@@ -296,8 +295,7 @@ const createProductionCards = (cardsData, aircraftDelivered) => {
                                   alt="plane_graph">
 
                               <article class="production__card_description">
-                                  <img class="production__flag" src="${aircraft?.flag}" alt="flag">
-                                  <p class="production__msn">MSN  ${aircraft?.msn}</p>
+                                 
                               </article>  
                           </div>`;
       });
@@ -309,7 +307,7 @@ const createProductionCards = (cardsData, aircraftDelivered) => {
 
   });
 }
-
+//descargar excel
 const openExcel = document.getElementById('open-excel');
 openExcel.addEventListener('click', () => {
   // const workbook = new Excel.Workbook();
