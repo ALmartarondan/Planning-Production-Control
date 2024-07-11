@@ -33,6 +33,10 @@
     <link rel="stylesheet" href="reporting/reporting.css">
     <link rel="stylesheet" href="style.css">
 
+    <!-- A400M -->
+    <link rel="stylesheet" href="a400m/a400m.css">
+
+
     <title>ALTEN</title>
 </head>
 
@@ -53,47 +57,50 @@
     </nav>
 
     <header class="tabs">
-        <div class="tabs__item active">
-            <span class="tabs__title">Master Planning</span>
+        <div class="main_tabs">
+            <div class="tabs__item active">
+                <span class="tabs__title">Master Planning</span>
+            </div>
+            <div class="tabs__item">
+                <span class="tabs__title">Tactical Planning</span>
+            </div>
+            <div class="tabs__item">
+                <span class="tabs__title">Production</span>
+            </div>
+            <div class="tabs__item">
+                <span class="tabs__title">Reporting</span>
+            </div>
         </div>
-        <div class="tabs__item">
-            <span class="tabs__title">Tactical Planning</span>
-        </div>
-        <div class="tabs__item">
-            <span class="tabs__title">Production</span>
-        </div>
-        <div class="tabs__item">
-            <span class="tabs__title">Reporting</span>
+        <!-- subbarra navegacion x programas -->
+        <!-- A400M, F8X, F10X, BOEING, MRTT, EFA, LTA, UE -->
+        <div class="sub_tabs">
+            <div class="tabs__item">
+                <span class="subtabs__title">A400M</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">F8X</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">F10X</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">BOEING</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">MRTT</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">EFA</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">LTA</span>
+            </div>
+            <div class="tabs__item">
+                <span class="subtabs__title">UE</span>
+            </div>
         </div>
     </header>
-    <!-- subbarra navegacion x programas -->
-    <!-- A400M, F8X, F10X, BOEING, MRTT, EFA, LTA, UE -->
-    <div class="sub_tabs">
-        <div class="subtabs__item">
-            <span class="subtabs__title">A400M</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">F8X</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">F10X</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">BOEING</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">MRTT</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">EFA</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">LTA</span>
-        </div>
-        <div class="subtabs__item">
-            <span class="subtabs__title">UE</span>
-        </div>
-    </div>
+
     <section class="content">
         <div class="content__option active" id="master">
             <h1>Master Planning</h1>
@@ -737,6 +744,28 @@
                     </main>
                 </div>
             </div>
+
+        </div>
+        <div class="content__option" id="a400m">
+            <h1>A400M</h1>
+            <section id="program__list"></section>
+            <section id="program__modal" class="modal">
+                <div id="program_modal__container" class="modal__container"></div>
+            </section>
+        </div>
+        <div class="content__option" id="f8x">
+        </div>
+        <div class="content__option" id="f10x">
+        </div>
+        <div class="content__option" id="boeing">
+        </div>
+        <div class="content__option" id="mrtt">
+        </div>
+        <div class="content__option" id="efa">
+        </div>
+        <div class="content__option" id="lta">
+        </div>
+        <div class="content__option" id="ue">
         </div>
     </section>
     <script src="https://kit.fontawesome.com/2a07e61abb.js" crossorigin="anonymous"></script>
@@ -756,7 +785,8 @@
     <!-- Tactical scritp -->
     <script defer src="tactical_new.js"></script>
 
-     <!-- Calendar Button Modal -->
-     <script defer src="programs_new.js"></script>
+    <!-- Programs script -->
+    <script defer src="programs_new.js"></script>
 </body>
+
 </html>

@@ -9,15 +9,18 @@ body {
     box-sizing: border-box;
 }
 
-
 .tabs {
+    display: flex;
+    flex-direction: column;
+}
+.main_tabs {
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
     border-bottom: 1px solid #c6c6c6;
 }
 
-.tabs .tabs__item {
+.main_tabs .tabs__item {
     flex: 1 0 100px;
     justify-content: center;
     align-items: center;
@@ -27,31 +30,32 @@ body {
     transition: all .5s ease;
 }
 
-.tabs .tabs__item.active {
+.main_tabs .tabs__item.active {
     background-color: #00205b;
     border-radius: 10px 10px 0 0;
 }
 
-.tabs .tabs__item.active .tabs__title {
+.main_tabs .tabs__item.active .tabs__title {
     color: white;
 }
 
-.tabs__item:hover {
+.main_tabs .tabs__item:hover {
     background-color: rgba(148, 186, 255, 0.747);
     border-radius: 10px 10px 0 0;
 }
 
-.tabs__item:hover .tabs__title {
+.main_tabs .tabs__item:hover .tabs__title {
     color: white;
 }
 
-
-.tabs__title {
+.main_tabs .tabs__title {
     font-size: 16px;
     font-weight: 700;
     color: #858585;
     user-select: none;
 }
+
+
 
 .content {
     /* height: 100vh; */
@@ -127,3 +131,53 @@ body {
     display: flex !important;
     animation: opacity-up .4s;
 }
+
+.sub_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-bottom: 1px solid #c6c6c6;
+    height: 2.5rem;
+}
+ 
+.sub_tabs .tabs__item {
+    flex: 1 0 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    transition: all .5s ease;
+}
+ 
+.sub_tabs .tabs__item.active {
+    background-color: #aeb1b7;
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+ 
+.sub_tabs .tabs__item.active .subtabs__title {
+    color: white;
+}
+ 
+.sub_tabs .tabs__item:hover {
+    background-color: rgba(148, 186, 255, 0.747);
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+ 
+.sub_tabs .tabs__item:hover .subtabs__title {
+    color: white;
+}
+ 
+.sub_tabs .subtabs__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    color: #858585;
+    user-select: none;
+}
+ 
