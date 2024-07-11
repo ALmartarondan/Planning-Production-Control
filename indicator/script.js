@@ -372,10 +372,10 @@ const createProgramsCards = (cardsData, aircraftDelivered) => {
                                       <img src="${data.flag}" class="modal__flag" alt="flag">
                                       <span class="modal__n_msn">MSN ${data.msn}</span>
                                   </div>
-                                  <i id="modal__close" class="fas fa-times"></i>
+                                  <i id="program_modal__close" class="fas fa-times"></i>
                               </header>`
 
-      const modalClose = document.getElementById('modal__close');
+      const modalClose = document.getElementById('program_modal__close');
       modalClose.addEventListener('click', () => planeModal.classList.remove('modal--show'));
 
       const main = document.createElement('main');
