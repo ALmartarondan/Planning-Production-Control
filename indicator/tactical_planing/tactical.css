@@ -221,6 +221,7 @@ dialog {
 }
  
 .form_button {
+    
     position: relative;
     overflow: hidden;
     height: 2rem;
@@ -271,8 +272,8 @@ dialog {
     display: flex;
     flex-direction: column;
     max-height: 52rem;
-    height: 75%;
-    width: 20%;
+    /* height: 55%; */
+    width: 65%;
     min-width: 35rem;
     border: 1px solid #c6c6c6;
     border-radius: 20px;
