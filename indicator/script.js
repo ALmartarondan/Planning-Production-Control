@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // createAircraftPlanned(cardsData.length, aircraftDelivered.length);
       // createDateTable(dataAux);
       // createProductionCards(cardsData, aircraftDelivered);
-      createProgramsCards(cardsData, aircraftDelivered);
+      createProgramsCards(cardsData);
 
     })
     .catch(error => console.error("Error fetching data:", error));
@@ -341,7 +341,7 @@ openExcel.addEventListener('click', () => {
 });
 
 // metodo para crear las tarjetas de los programas (a400m, f8x,f10x...)
-const createProgramsCards = (cardsData, aircraftDelivered) => {
+const createProgramsCards = (cardsData) => {
   const planeModal = document.getElementById('program__modal');
   const modalContainer = document.getElementById('program_modal__container');
 
@@ -349,11 +349,11 @@ const createProgramsCards = (cardsData, aircraftDelivered) => {
 
   cardsData.forEach((data, i) => {
 
-    const card = document.createElement("div");
+    const card = document.createElement("div-1");
     card.className = "a400m__card";
     card.innerHTML = `<h3 class="a400m__station">${data.subprogram}</h3>`
 
-    const cardContent = document.createElement("div");
+    const cardContent = document.createElement("div-2");
     cardContent.className = "a400m__card_content";
 
     const plane_graph = document.createElement("img");
@@ -374,7 +374,7 @@ const createProgramsCards = (cardsData, aircraftDelivered) => {
                                   </div>
                                   <i id="program_modal__close" class="fas fa-times"></i>
                               </header>`
-
+      
       const modalClose = document.getElementById('program_modal__close');
       modalClose.addEventListener('click', () => planeModal.classList.remove('modal--show'));
 
