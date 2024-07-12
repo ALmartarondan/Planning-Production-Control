@@ -122,7 +122,10 @@
                     </button>
                     <!-- Ventana modal Formulario -->
                     <dialog id="modal_calendar" class="modal__container1">
-                        <header class="calendar-header">Edit calendars</header>
+                        <header class="calendar-header">Edit calendars
+                            <button  style="border:none; background-color: transparent;" onclick="document.getElementById('modal_calendar').close();"><i
+                                    id="program_modal__close" style="color:black;" class="fas fa-times"></i></button>
+                        </header>
                         <!-- Style en cada div -->
                         <div style="display: flex; padding: 1rem; flex-direction: column; gap: 0.5rem;">
                             <div style="display: flex; gap: 1rem;">
