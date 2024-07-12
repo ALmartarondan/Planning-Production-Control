@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // createAircraftPlanned(cardsData.length, aircraftDelivered.length);
       // createDateTable(dataAux);
       // createProductionCards(cardsData, aircraftDelivered);
-      createProgramsCards(cardsData);
+      createProgramsCards(cardsData, aircraftDelivered);
 
     })
     .catch(error => console.error("Error fetching data:", error));
@@ -183,10 +183,10 @@ const createProductionCards = (cardsData, aircraftDelivered) => {
                                       <img src="${data.flag}" class="modal__flag" alt="flag">
                                       <span class="modal__n_msn">MSN ${data.msn}</span>
                                   </div>
-                                  <i id="modal__close" class="fas fa-times"></i>
+                                  <i id="modal_close" style="color:black;"  class="fas fa-times"></i>
                               </header>`
 
-      const modalClose = document.getElementById('modal__close');
+      const modalClose = document.getElementById('modal_close');
       modalClose.addEventListener('click', () => planeModal.classList.remove('modal--show'));
 
       const main = document.createElement('main');
@@ -341,7 +341,7 @@ openExcel.addEventListener('click', () => {
 });
 
 // metodo para crear las tarjetas de los programas (a400m, f8x,f10x...)
-const createProgramsCards = (cardsData) => {
+const createProgramsCards = (cardsData, aircraftDelivered) => {
   const planeModal = document.getElementById('program__modal');
   const modalContainer = document.getElementById('program_modal__container');
 
@@ -349,11 +349,11 @@ const createProgramsCards = (cardsData) => {
 
   cardsData.forEach((data, i) => {
 
-    const card = document.createElement("div-1");
+    const card = document.createElement("div");
     card.className = "a400m__card";
     card.innerHTML = `<h3 class="a400m__station">${data.subprogram}</h3>`
 
-    const cardContent = document.createElement("div-2");
+    const cardContent = document.createElement("div");
     cardContent.className = "a400m__card_content";
 
     const plane_graph = document.createElement("img");
@@ -372,10 +372,10 @@ const createProgramsCards = (cardsData) => {
                                       <img src="${data.flag}" class="modal__flag" alt="flag">
                                       <span class="modal__n_msn">MSN ${data.msn}</span>
                                   </div>
-                                  <i id="program_modal__close" class="fas fa-times"></i>
+                                  <i id="modal__close" style="color:black;" class="fas fa-times"></i>
                               </header>`
-      
-      const modalClose = document.getElementById('program_modal__close');
+
+      const modalClose = document.getElementById('modal__close');
       modalClose.addEventListener('click', () => planeModal.classList.remove('modal--show'));
 
       const main = document.createElement('main');
