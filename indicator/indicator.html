@@ -184,7 +184,20 @@
                         <img id="gantt_diagram" src="../assets/img/TimeLine MSN - Recortado.png">
                     </div>
                 </div>
-                <div class="tactical__blurred"></div>
+                <button onclick="document.getElementById('modal_edit_tact').showModal();" class="boton-flotante">
+                    <img src="../assets/img/svg-edit.svg" alt="Edit">
+                </button>
+    
+                <dialog id="modal_edit_tact" class="edit_modal__container">
+                    <header class="edit_modal_header">Edit
+                        <button onclick="document.getElementById('modal_edit_tact').close();"><i id="program_modal__close"
+                                class="fas fa-times"></i></button>
+                    </header>
+                    <div>
+                        <img src="../assets/img/edit-form.png" alt="Formulario edición">
+                    </div>
+                </dialog>
+                <!-- <div class="tactical__blurred"></div> -->
             </div>
         </div>
         <div class="content__option" id="production">
@@ -193,6 +206,19 @@
             <section id="plane__modal" class="modal">
                 <div id="modal__container" class="modal__container"></div>
             </section>
+            <button onclick="document.getElementById('modal_edit_prod').showModal();" class="boton-flotante">
+                <img src="../assets/img/svg-edit.svg" alt="Edit">
+            </button>
+
+            <dialog id="modal_edit_prod" class="edit_modal__container">
+                <header class="edit_modal_header">Edit
+                    <button onclick="document.getElementById('modal_edit_prod').close();"><i id="program_modal__close"
+                            class="fas fa-times"></i></button>
+                </header>
+                <div>
+                    <img src="../assets/img/edit-form.png" alt="Formulario edición">
+                </div>
+            </dialog>
         </div>
         <div class="content__option" id="reporting">
             <aside class="sidebar">
@@ -752,6 +778,20 @@
             <section id="program__modal" class="modal">
                 <div id="program_modal__container" class="modal__container"></div>
             </section>
+            <button onclick="document.getElementById('modal_edit_a400m').showModal();" class="boton-flotante">
+                <img src="../assets/img/svg-edit.svg" alt="Edit">
+            </button>
+
+            <dialog id="modal_edit_a400m" class="edit_modal__container">
+                <header class="edit_modal_header">Edit
+                    <button onclick="document.getElementById('modal_edit_a400m').close();"><i id="program_modal__close"
+                            class="fas fa-times"></i></button>
+                </header>
+                <div>
+                    <img src="../assets/img/edit-form.png" alt="Formulario edición">
+                </div>
+            </dialog>
+
         </div>
         <div class="content__option" id="f8x">
         </div>
