@@ -39,7 +39,7 @@ const createTacticalCards = (cardsData) => {
                                         <img src="${data.flag}" class="modal__flag" alt="flag">
                                         <span class="modal__n_msn">MSN ${data.msn}</span>
                                     </div>
-                                    <i id="tactical_modal__close" class="fas fa-times"></i>
+                                    <i id="tactical_modal__close" style="color:black;" class="fas fa-times"></i>
                                 </header>`
  
             const modalClose = document.getElementById('tactical_modal__close');
